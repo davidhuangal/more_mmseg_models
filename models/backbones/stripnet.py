@@ -1,3 +1,8 @@
+"""
+This file contains code adapted from HVision-NKU
+Source: https://github.com/HVision-NKU/Strip-R-CNN
+License: Attribution-NonCommercial 4.0 International
+"""
 import torch
 import torch.nn as nn
 from mmengine.model.weight_init import constant_init, normal_init, trunc_normal_init
