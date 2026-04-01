@@ -36,4 +36,4 @@ This project is dedicated to implementing / adapting more models for use with th
   </tbody>
 </table>
 
-Pretrained weights are available on [Google Drive](https://drive.google.com/drive/folders/131IA7V0TIt3pj4cApicav6MBo2rQFQ95?usp=sharing).
+Pretrained weights which have been made MMSeg compatible are available on [Google Drive](https://drive.google.com/drive/folders/131IA7V0TIt3pj4cApicav6MBo2rQFQ95?usp=sharing).
