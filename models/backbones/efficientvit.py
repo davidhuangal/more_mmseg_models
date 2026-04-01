@@ -1,6 +1,7 @@
 # EfficientViT: Multi-Scale Linear Attention for High-Resolution Dense Prediction
 # Han Cai, Junyan Li, Muyan Hu, Chuang Gan, Song Han
 # International Conference on Computer Vision (ICCV), 2023
+# Source: https://github.com/mit-han-lab/efficientvit
 
 from __future__ import annotations
 
