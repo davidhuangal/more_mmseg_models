@@ -1,0 +1,35 @@
+# model settings
+data_preprocessor = dict(
+    type="SegDataPreProcessor",
+    mean=[123.675, 116.28, 103.53],
+    std=[58.395, 57.12, 57.375],
+    bgr_to_rgb=True,
+    pad_val=0,
+    seg_pad_val=255,
+)
+model = dict(
+    type="EncoderDecoder",
+    data_preprocessor=data_preprocessor,
+    pretrained=None,
+    backbone=dict(
+        type='LSKNet',
+        embed_dims=[64, 128, 320, 512],
+        mlp_ratios=[8, 8, 4, 4],
+        drop_rate=0.0,
+        drop_path_rate=0.1,
+        depths=[2, 2, 4, 2],
+        norm_cfg=dict(type='SyncBN', requires_grad=True),
+    ),
+    decode_head=dict(
+        type="UNetFormerDecoder",
+        in_channels=[64, 128, 320, 512],
+        in_index=[0, 1, 2, 3],
+        decode_channels=64,
+        dropout=0.1,
+        window_size=8,
+        num_classes=16,
+    ),
+    # model training and testing settings
+    train_cfg=dict(),
+    test_cfg=dict(mode="whole"),
+)
